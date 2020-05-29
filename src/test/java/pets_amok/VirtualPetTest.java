@@ -25,5 +25,28 @@ public class VirtualPetTest {
         RoboticDog underTest = new RoboticDog("Mya","a robotic dog");
     }
 
+    //Create getter/setter for oilMaintenanceLevel in Robotic Dog & Cat class
+    @Test
+    public void getOilMaintenanceLevelForRoboticDog(){
+        RoboticDog underTest = new RoboticDog("Mya","a robotic dog");
+        int result = underTest.getOilMaintenanceLevel();
+    }
 
+    @Test
+    public void setOilMaintenanceLevelForRoboticDog() {
+        RoboticDog underTest = new RoboticDog("Mya", "a robotic dog");
+        underTest.setOilMaintenanceLevel(50);
+    }
+
+    @Test
+    public void getOilMaintenanceLevelForRoboticCat(){
+        RoboticCat underTest = new RoboticCat("Lacy","a robotic cat");
+        int result = underTest.getOilMaintenanceLevel();
+    }
+
+    @Test
+    public void setOilMaintenanceLevelForRoboticCat(){
+        RoboticCat underTest = new RoboticCat("Lacy","a robotic cat");
+        underTest.setOilMaintenanceLevel(50);
+    }
 }

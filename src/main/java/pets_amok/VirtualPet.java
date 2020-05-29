@@ -70,4 +70,12 @@ public abstract class VirtualPet {
     public void setOverallHealth(int overallHealth) {
         this.overallHealth = overallHealth;
     }
+
+    public void play(){
+        happiness += random.nextInt(11);
+        sadness -= random.nextInt(6);
+        boredom -= random.nextInt(6);
+    }
+
+    public abstract void tick();
 }

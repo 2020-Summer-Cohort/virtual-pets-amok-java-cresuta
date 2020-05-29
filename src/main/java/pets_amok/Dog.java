@@ -10,4 +10,9 @@ public abstract class Dog extends VirtualPet {
         setHappiness(getHappiness() + random.nextInt(6));
     }
 
+    @Override
+    public void tick(){
+
+    }
+
 }
