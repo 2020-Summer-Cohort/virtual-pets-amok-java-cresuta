@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class VirtualPetShelterTest {
 
     @Test
-    public void createVirtualPetShelter(){
+    public void createVirtualPetShelter() {
         VirtualPetShelter underTest = new VirtualPetShelter();
     }
 }
