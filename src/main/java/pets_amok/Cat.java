@@ -1,4 +1,4 @@
 package pets_amok;
 
-public class Cat {
+public class Cat extends VirtualPet {
 }

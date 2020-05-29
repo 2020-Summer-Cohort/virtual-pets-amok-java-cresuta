@@ -1,4 +1,4 @@
 package pets_amok;
 
-public class RoboticDog {
+public class RoboticDog extends Dog implements Robotic {
 }

@@ -1,4 +1,4 @@
 package pets_amok;
 
-public class OrganicCat {
+public class OrganicCat extends Cat implements Organic{
 }
