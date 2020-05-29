@@ -2,7 +2,7 @@ package pets_amok;
 
 import java.util.Random;
 
-public class VirtualPet {
+public abstract class VirtualPet {
 
     private String name;
     private String description;
