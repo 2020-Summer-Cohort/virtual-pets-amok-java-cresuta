@@ -14,15 +14,15 @@ public class VirtualPetShelterApp {
         wallysShelter.admitHomelessVirtualPet("Lacy", lacy);
         wallysShelter.admitHomelessVirtualPet("Robo Mya", roboMya);
         wallysShelter.admitHomelessVirtualPet("Robo Lacy", roboLacy);
-        System.out.println("Thank you for volunteering at Wally's Virtual Pet Shelter!");
+        System.out.println("\nThank you for volunteering at Wally's Virtual Pet Shelter!");
         String petChoice;
         int userChoice;
         boolean isShelterOpen = true;
         while (isShelterOpen) {
-            statusChartHeader();
-            for (VirtualPet pet : wallysShelter.virtualShelter.values()) {
-                System.out.println(pet.getName() + "\t" + "\t" + pet.getOverallHealth() + "\t" + "\t" + pet.getHappiness() + "\t" + "\t" + pet.getSadness() + "\t" + "\t" + pet.getBoredom());
-            }
+            wallysShelter.organicDogStatusChartHeader();
+            wallysShelter.organicCatStatusChartHeader();
+            wallysShelter.roboticDogStatusChartHeader();
+            wallysShelter.roboticCatStatusChartHeader();
             displayInstructions();
             userChoice = input.nextInt();
             if (userChoice == 1) {
@@ -47,7 +47,7 @@ public class VirtualPetShelterApp {
                 wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 6) {
                 System.out.println("Which pet would you like to play with?");
-                System.out.println(wallysShelter.availableVirtualPets());
+                System.out.println(wallysShelter.availableVirtualPets().keySet());
                 input.nextLine();
                 petChoice = input.nextLine();
                 if (petChoice.equalsIgnoreCase("Mya")) {
@@ -72,7 +72,7 @@ public class VirtualPetShelterApp {
                 wallysShelter.walkAllDogs();
             } else if (userChoice == 8) {
                 System.out.println("Which pet would you like to adopt?");
-                System.out.println(wallysShelter.availableVirtualPets());
+                System.out.println(wallysShelter.availableVirtualPets().keySet());
                 input.nextLine();
                 petChoice = input.nextLine();
                 if (petChoice.equalsIgnoreCase("Mya")) {
@@ -136,12 +136,6 @@ public class VirtualPetShelterApp {
         System.out.println("8. Adopt a pet");
         System.out.println("9. Admit a pet");
         System.out.println("10. Quit");
-    }
-
-    public static void statusChartHeader() {
-        System.out.println("\nThis is the status of all the pets: ");
-        System.out.println("\nName      |Health  |Happiness  |Sadness  |Boredom");
-        System.out.println("----------|--------|-----------|---------|--------");
     }
 
     public static void goodbyeMessage() {
