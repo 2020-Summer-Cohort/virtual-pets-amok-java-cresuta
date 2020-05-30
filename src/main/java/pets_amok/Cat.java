@@ -6,8 +6,4 @@ public abstract class Cat extends VirtualPet {
         super(name, description);
     }
 
-    @Override
-    public void tick(){
-
-    }
 }

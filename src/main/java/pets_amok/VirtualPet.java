@@ -16,10 +16,10 @@ public abstract class VirtualPet {
     public VirtualPet(String name, String description) {
         this.name = name;
         this.description = description;
-        this.happiness += 30;
-        this.sadness += 30;
-        this.boredom += 30;
-        this.overallHealth += 30;
+        this.happiness = 30;
+        this.sadness = 30;
+        this.boredom = 30;
+        this.overallHealth = 30;
 
     }
 
@@ -77,5 +77,5 @@ public abstract class VirtualPet {
         boredom -= random.nextInt(6);
     }
 
-    public abstract void tick();
+    public abstract void updateVirtualPetFields();
 }

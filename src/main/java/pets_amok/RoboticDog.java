@@ -9,6 +9,11 @@ public class RoboticDog extends Dog implements Robotic {
         this.oilMaintenanceLevel = 30;
     }
 
+    @Override
+    public void updateVirtualPetFields() {
+        this.oilMaintenanceLevel += 5;
+    }
+
     public int getOilMaintenanceLevel() {
         return oilMaintenanceLevel;
     }

@@ -37,27 +37,29 @@ public class OrganicDog extends Dog implements Organic {
         this.levelOfWaste = levelOfWaste;
     }
 
-    public void cleanOrganicPetCage() {
+    public void cleanOrganicDogCage() {
         levelOfWaste = 0;
     }
 
     @Override
+    public void updateVirtualPetFields(){
+        this.hunger += 5;
+        this.thirst += 5;
+        this.levelOfWaste += 5;
+    }
+
+    @Override
     public void feedOrganicPet() {
-        hunger -= random.nextInt(6);
-        thirst += random.nextInt(6);
-        levelOfWaste += random.nextInt(6);
+        hunger -= 10;
+        thirst += random.nextInt(7);
+        levelOfWaste += random.nextInt(7);
     }
 
     @Override
     public void waterOrganicPet() {
-        thirst -= random.nextInt(6);
-        hunger += random.nextInt(6);
-        levelOfWaste += random.nextInt(6);
-    }
-
-    @Override
-    public void tick() {
-
+        thirst -= 10;
+        hunger += random.nextInt(7);
+        levelOfWaste += random.nextInt(7);
     }
 }
 

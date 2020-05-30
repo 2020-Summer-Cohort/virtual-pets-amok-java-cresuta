@@ -93,4 +93,43 @@ public class VirtualPetTest {
         OrganicDog underTest = new OrganicDog("Mya","an organic dog");
         underTest.setLevelOfWaste(15);
     }
+
+    @Test
+    public void getHungerForOrganicCat(){
+        OrganicCat underTest = new OrganicCat("Lacy","an organic cat");
+        int result = underTest.getHunger();
+        assertEquals(30,result);
+    }
+
+    @Test
+    public void setHungerForOrganicCat(){
+        OrganicCat underTest = new OrganicCat("Lacy","an organic cat");
+        underTest.setHunger(30);
+    }
+
+    @Test
+    public void getThirstForOrganicCat(){
+        OrganicCat underTest = new OrganicCat("Lacy","an organic cat");
+        int result = underTest.getThirst();
+        assertEquals(30,result);
+    }
+
+    @Test
+    public void setThirstForOrganicCat(){
+        OrganicCat underTest = new OrganicCat("Lacy","an organic cat");
+        underTest.setThirst(30);
+    }
+
+    @Test
+    public void getLevelOfWasteForOrganicCat(){
+        OrganicCat underTest = new OrganicCat("Lacy","an organic cat");
+        int result = underTest.getLevelOfWaste();
+        assertEquals(15,result);
+    }
+
+    @Test
+    public void setLevelOfWasteForOrganicCat(){
+        OrganicCat underTest = new OrganicCat("Lacy","an organic cat");
+        underTest.setLevelOfWaste(15);
+    }
 }
