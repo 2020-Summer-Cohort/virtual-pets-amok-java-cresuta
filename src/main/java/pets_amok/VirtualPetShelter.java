@@ -39,6 +39,10 @@ public class VirtualPetShelter {
         virtualShelter.put(name, newVirtualPet);
     }
 
+    public void play(String name){
+        virtualShelter.get(name).play();
+    }
+
 
     public void walkAllDogs() {
         for (VirtualPet pet : availableVirtualPets()) {
