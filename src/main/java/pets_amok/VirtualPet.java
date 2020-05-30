@@ -16,10 +16,10 @@ public abstract class VirtualPet {
     public VirtualPet(String name, String description) {
         this.name = name;
         this.description = description;
-        this.happiness += random.nextInt(75);
-        this.sadness += random.nextInt(75);
-        this.boredom += random.nextInt(75);
-        this.overallHealth += random.nextInt(75);
+        this.happiness += 30;
+        this.sadness += 30;
+        this.boredom += 30;
+        this.overallHealth += 30;
 
     }
 

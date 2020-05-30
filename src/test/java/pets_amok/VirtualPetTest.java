@@ -2,6 +2,8 @@ package pets_amok;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class VirtualPetTest {
 
     //TDD for creating classes that aren't abstract
@@ -30,23 +32,65 @@ public class VirtualPetTest {
     public void getOilMaintenanceLevelForRoboticDog(){
         RoboticDog underTest = new RoboticDog("Mya","a robotic dog");
         int result = underTest.getOilMaintenanceLevel();
+        assertEquals(30,result);
     }
 
     @Test
     public void setOilMaintenanceLevelForRoboticDog() {
         RoboticDog underTest = new RoboticDog("Mya", "a robotic dog");
-        underTest.setOilMaintenanceLevel(50);
+        underTest.setOilMaintenanceLevel(30);
     }
 
     @Test
     public void getOilMaintenanceLevelForRoboticCat(){
         RoboticCat underTest = new RoboticCat("Lacy","a robotic cat");
         int result = underTest.getOilMaintenanceLevel();
+        assertEquals(30,result);
     }
 
     @Test
     public void setOilMaintenanceLevelForRoboticCat(){
         RoboticCat underTest = new RoboticCat("Lacy","a robotic cat");
-        underTest.setOilMaintenanceLevel(50);
+        underTest.setOilMaintenanceLevel(30);
+    }
+
+    //Create getter/setter for all fields in Organic Dog & Cat
+    @Test
+    public void getHungerForOrganicDog(){
+        OrganicDog underTest = new OrganicDog("Mya","an organic dog");
+        int result = underTest.getHunger();
+        assertEquals(30,result);
+    }
+
+    @Test
+    public void setHungerForOrganicDog(){
+        OrganicDog underTest = new OrganicDog("Mya","an organic dog");
+        underTest.setHunger(30);
+    }
+
+    @Test
+    public void getThirstForOrganicDog(){
+        OrganicDog underTest = new OrganicDog("Mya","an organic dog");
+        int result = underTest.getThirst();
+        assertEquals(30,result);
+    }
+
+    @Test
+    public void setThirstForOrganicDog(){
+        OrganicDog underTest = new OrganicDog("Mya","an organic dog");
+        underTest.setThirst(30);
+    }
+
+    @Test
+    public void getLevelOfWasteForOrganicDog(){
+        OrganicDog underTest = new OrganicDog("Mya","an organic dog");
+        int result = underTest.getLevelOfWaste();
+        assertEquals(15,result);
+    }
+
+    @Test
+    public void setLevelOfWasteForOrganicDog(){
+        OrganicDog underTest = new OrganicDog("Mya","an organic dog");
+        underTest.setLevelOfWaste(15);
     }
 }

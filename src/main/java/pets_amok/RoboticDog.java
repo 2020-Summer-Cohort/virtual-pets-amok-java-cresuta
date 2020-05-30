@@ -6,7 +6,7 @@ public class RoboticDog extends Dog implements Robotic {
 
     public RoboticDog(String name, String description) {
         super(name, description);
-        this.oilMaintenanceLevel = random.nextInt(75);
+        this.oilMaintenanceLevel = 30;
     }
 
     public int getOilMaintenanceLevel() {

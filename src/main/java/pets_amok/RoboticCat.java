@@ -6,7 +6,7 @@ public class RoboticCat extends Cat implements Robotic {
 
     public RoboticCat(String name, String description) {
         super(name, description);
-        this.oilMaintenanceLevel = random.nextInt(75);
+        this.oilMaintenanceLevel = 30;
     }
 
     public int getOilMaintenanceLevel() {

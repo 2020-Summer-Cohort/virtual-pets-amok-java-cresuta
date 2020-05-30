@@ -8,12 +8,36 @@ public class OrganicDog extends Dog implements Organic {
 
     public OrganicDog(String name, String description) {
         super(name, description);
-        this.hunger = random.nextInt(75);
-        this.thirst = random.nextInt(75);
-        this.levelOfWaste = random.nextInt(75);
+        this.hunger = 30;
+        this.thirst = 30;
+        this.levelOfWaste = 15;
     }
 
-    public void cleanOrganicPetCage(){
+    public int getHunger() {
+        return hunger;
+    }
+
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
+    }
+
+    public int getThirst() {
+        return thirst;
+    }
+
+    public void setThirst(int thirst) {
+        this.thirst = thirst;
+    }
+
+    public int getLevelOfWaste() {
+        return levelOfWaste;
+    }
+
+    public void setLevelOfWaste(int levelOfWaste) {
+        this.levelOfWaste = levelOfWaste;
+    }
+
+    public void cleanOrganicPetCage() {
         levelOfWaste = 0;
     }
 
