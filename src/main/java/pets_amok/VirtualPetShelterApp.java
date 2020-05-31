@@ -19,10 +19,7 @@ public class VirtualPetShelterApp {
         int userChoice;
         boolean isShelterOpen = true;
         while (isShelterOpen) {
-            wallysShelter.organicDogStatusChartHeader();
-            wallysShelter.organicCatStatusChartHeader();
-            wallysShelter.roboticDogStatusChartHeader();
-            wallysShelter.roboticCatStatusChartHeader();
+            wallysShelter.virtualPetsStatusChartHeader();
             displayInstructions();
             userChoice = input.nextInt();
             if (userChoice == 1) {

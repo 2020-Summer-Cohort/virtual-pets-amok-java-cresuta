@@ -124,4 +124,12 @@ public class VirtualPetShelter {
             }
         }
     }
+
+    // Organize each virtual pet status chart header into a single method to clean up code in main method of application
+    public void virtualPetsStatusChartHeader(){
+        organicDogStatusChartHeader();
+        organicCatStatusChartHeader();
+        roboticDogStatusChartHeader();
+        roboticCatStatusChartHeader();
+    }
 }
