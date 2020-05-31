@@ -7,7 +7,8 @@ public abstract class Dog extends VirtualPet {
     }
 
     public void walk(){
-        setHappiness(getHappiness() + random.nextInt(6));
+        setHappiness(getHappiness() + 10);
+        setOverallHealth(getOverallHealth() + 10);
     }
 
 }

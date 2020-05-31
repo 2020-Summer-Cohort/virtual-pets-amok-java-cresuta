@@ -67,6 +67,7 @@ public class VirtualPetShelterApp {
             } else if (userChoice == 7) {
                 System.out.println("** You walked all the dogs! **");
                 wallysShelter.walkAllDogs();
+                wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 8) {
                 System.out.println("Which pet would you like to adopt?");
                 System.out.println(wallysShelter.availableVirtualPets().keySet());
@@ -114,7 +115,24 @@ public class VirtualPetShelterApp {
                     wallysShelter.admitHomelessVirtualPet(newAdmitName,newAdmit);
                 }
                 wallysShelter.updateVirtualPetShelter();
-            } else if (userChoice == 10){
+            } else if (userChoice == 10) {
+                System.out.println(wallysShelter.availableVirtualPets().keySet());
+                System.out.println("\nWhich pet would you like to know more about?");
+                input.nextLine();
+                petChoice = input.nextLine();
+                if (petChoice.equalsIgnoreCase("Mya")) {
+                    System.out.println(petChoice + ": " + mya.getDescription());
+                } else if (petChoice.equalsIgnoreCase("Lacy")) {
+                    System.out.println(petChoice + ": " + lacy.getDescription());
+                } else if (petChoice.equalsIgnoreCase("Robo Mya")) {
+                    System.out.println(petChoice + ": " + roboMya.getDescription());
+                } else if (petChoice.equalsIgnoreCase("Robo Lacy")) {
+                    System.out.println(petChoice + ": " + roboLacy.getDescription());
+                } else {
+                    System.out.println(petChoice + ": " + wallysShelter.availableVirtualPets().get(petChoice).getDescription());
+                }
+                wallysShelter.updateVirtualPetShelter();
+            } else if (userChoice == 11){
                 goodbyeMessage();
                 break;
             }
@@ -132,7 +150,8 @@ public class VirtualPetShelterApp {
         System.out.println("7. Walk all the dogs");
         System.out.println("8. Adopt a pet");
         System.out.println("9. Admit a pet");
-        System.out.println("10. Quit");
+        System.out.println("10. Read a description about a pet");
+        System.out.println("11. Quit");
     }
 
     public static void goodbyeMessage() {
