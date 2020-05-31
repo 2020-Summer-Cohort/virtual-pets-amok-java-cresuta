@@ -3,10 +3,10 @@ package pets_amok;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class VirtualPetTest {
 
-    //TDD for creating classes that aren't abstract
     @Test
     public void createOrganicCat(){
         OrganicCat underTest = new OrganicCat("Lacy","an organic cat");
@@ -27,7 +27,6 @@ public class VirtualPetTest {
         RoboticDog underTest = new RoboticDog("Mya","a robotic dog");
     }
 
-    //Create getter/setter for oilMaintenanceLevel in Robotic Dog & Cat class
     @Test
     public void getOilMaintenanceLevelForRoboticDog(){
         RoboticDog underTest = new RoboticDog("Mya","a robotic dog");
@@ -54,7 +53,6 @@ public class VirtualPetTest {
         underTest.setOilMaintenanceLevel(30);
     }
 
-    //Create getter/setter for all fields in Organic Dog & Cat
     @Test
     public void getHungerForOrganicDog(){
         OrganicDog underTest = new OrganicDog("Mya","an organic dog");
@@ -131,5 +129,50 @@ public class VirtualPetTest {
     public void setLevelOfWasteForOrganicCat(){
         OrganicCat underTest = new OrganicCat("Lacy","an organic cat");
         underTest.setLevelOfWaste(15);
+    }
+
+    @Test
+    public void letsGetOrganicDogName(){
+        OrganicDog underTest = new OrganicDog("Mya","an organic dog");
+        String result = underTest.getName();
+        assertEquals("Mya",result);
+    }
+
+    @Test
+    public void letsGetOrganicCatName(){
+        OrganicCat underTest = new OrganicCat("Lacy","an organic cat");
+        String result = underTest.getName();
+        assertEquals("Lacy",result);
+    }
+
+    @Test
+    public void letsGetRoboticCatName(){
+        OrganicCat underTest = new OrganicCat("Robo Lacy","a robotic cat");
+        String result = underTest.getName();
+        assertEquals("Robo Lacy",result);
+    }
+
+    @Test
+    public void checkThatOrganicDogIsADog(){
+        Dog underTest = new OrganicDog("Mya","an organic dog");
+        assertNotNull(underTest);
+    }
+
+    @Test
+    public void checkThatOrganicCatIsACat(){
+        Cat underTest = new OrganicCat("Lacy","an organic cat");
+        assertNotNull(underTest);
+    }
+
+    @Test
+    public void checkThatRoboticDogIsADog(){
+        Dog underTest = new RoboticDog("Robo Mya","a robotic dog");
+        assertNotNull(underTest);
+    }
+
+    @Test
+    public void checkThatRoboticCatIsACat(){
+        Dog underTest = new RoboticDog("Robo Lacy","a robotic cat");
+        assertNotNull(underTest);
     }
 }

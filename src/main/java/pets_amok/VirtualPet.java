@@ -7,7 +7,6 @@ public abstract class VirtualPet {
     private String name;
     private String description;
     private int happiness;
-    private int sadness;
     private int boredom;
     private int overallHealth;
 
@@ -17,7 +16,6 @@ public abstract class VirtualPet {
         this.name = name;
         this.description = description;
         this.happiness = 30;
-        this.sadness = 30;
         this.boredom = 30;
         this.overallHealth = 30;
 
@@ -47,14 +45,6 @@ public abstract class VirtualPet {
         this.happiness = happiness;
     }
 
-    public int getSadness() {
-        return sadness;
-    }
-
-    public void setSadness(int sadness) {
-        this.sadness = sadness;
-    }
-
     public int getBoredom() {
         return boredom;
     }
@@ -71,10 +61,10 @@ public abstract class VirtualPet {
         this.overallHealth = overallHealth;
     }
 
-    public void play(){
-        happiness += random.nextInt(11);
-        sadness -= random.nextInt(6);
-        boredom -= random.nextInt(6);
+    public void play() {
+        happiness += 15;
+        boredom -= 10;
+        overallHealth += 10;
     }
 
     public abstract void updateVirtualPetFields();

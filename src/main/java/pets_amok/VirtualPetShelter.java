@@ -1,6 +1,5 @@
 package pets_amok;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -84,44 +83,44 @@ public class VirtualPetShelter {
 
     public void organicDogStatusChartHeader() {
         System.out.println("\nThis is the status of all the Organic Dogs: ");
-        System.out.println("\nName      |Health  |Happiness  |Sadness  |Boredom  |Hunger  |Thirst  |Cage Waste");
-        System.out.println("----------|--------|-----------|---------|---------|--------|--------|--------");
+        System.out.println("\nName      |Health  |Happiness  |Boredom  |Hunger  |Thirst  |Cage Waste");
+        System.out.println("----------|--------|-----------|---------|--------|--------|--------");
         for (VirtualPet pet: availableVirtualPets().values()){
             if (pet instanceof OrganicDog){
-                System.out.println(pet.getName() + "\t" + "\t" + "\t" + pet.getOverallHealth() + "\t" + "\t" + "\t" + pet.getHappiness() + "\t" + "\t" + "\t" + pet.getSadness() + "\t" + "\t" + "\t" + pet.getBoredom() + "\t" + "\t" + ((OrganicDog) pet).getHunger() + "\t" + "\t" + ((OrganicDog) pet).getThirst() + "\t" + "\t" + ((OrganicDog) pet).getLevelOfWaste());
+                System.out.println(pet.getName() + "\t" + "\t" + "\t" + pet.getOverallHealth() + "\t" + "\t" + "\t" + pet.getHappiness() + "\t" + "\t" + "\t" + pet.getBoredom() + "\t" + "\t" + ((OrganicDog) pet).getHunger() + "\t" + "\t" + ((OrganicDog) pet).getThirst() + "\t" + "\t" + "\t" + ((OrganicDog) pet).getLevelOfWaste());
             }
         }
     }
 
     public void organicCatStatusChartHeader() {
         System.out.println("\nThis is the status of all the Organic Cats: ");
-        System.out.println("\nName      |Health  |Happiness  |Sadness  |Boredom  |Hunger  |Thirst  |Litter Waste");
-        System.out.println("----------|--------|-----------|---------|---------|--------|--------|--------");
+        System.out.println("\nName      |Health  |Happiness  |Boredom  |Hunger  |Thirst  |Litter Waste");
+        System.out.println("----------|--------|-----------|---------|--------|--------|--------");
         for (VirtualPet pet: availableVirtualPets().values()){
             if (pet instanceof OrganicCat){
-                System.out.println(pet.getName() + "\t" + "\t" + "\t" + pet.getOverallHealth() + "\t" + "\t" + pet.getHappiness() + "\t" + "\t" + "\t" + pet.getSadness() + "\t" + "\t" + pet.getBoredom() + "\t" + "\t" + "\t" + ((OrganicCat) pet).getHunger() + "\t" + "\t" + ((OrganicCat) pet).getThirst() + "\t" + "\t" + ((OrganicCat) pet).getLevelOfWaste());
+                System.out.println(pet.getName() + "\t" + "\t" + "\t" + pet.getOverallHealth() + "\t" + "\t" + pet.getHappiness() + "\t" + "\t" + pet.getBoredom() + "\t" + "\t" + "\t" + ((OrganicCat) pet).getHunger() + "\t" + "\t" + ((OrganicCat) pet).getThirst() + "\t" + "\t" + "\t" + ((OrganicCat) pet).getLevelOfWaste());
             }
         }
     }
 
     public void roboticDogStatusChartHeader() {
         System.out.println("\nThis is the status of all the Robotic Dogs: ");
-        System.out.println("\nName      |Health  |Happiness  |Sadness  |Boredom |Oil Level");
-        System.out.println("----------|--------|-----------|---------|--------|--------");
+        System.out.println("\nName      |Health  |Happiness  |Boredom |Oil Level");
+        System.out.println("----------|--------|-----------|--------|--------");
         for (VirtualPet pet: availableVirtualPets().values()){
             if (pet instanceof RoboticDog){
-                System.out.println(pet.getName() + "\t" + "\t" + pet.getOverallHealth() + "\t" + "\t" + pet.getHappiness() + "\t" + "\t" + "\t" + pet.getSadness() + "\t" + "\t" + pet.getBoredom() + "\t" + "\t" + ((RoboticDog) pet).getOilMaintenanceLevel());
+                System.out.println(pet.getName() + "\t" + "\t" + pet.getOverallHealth() + "\t" + "\t" + pet.getHappiness() + "\t" + "\t" + "\t" + pet.getBoredom() + "\t" + "\t" + ((RoboticDog) pet).getOilMaintenanceLevel());
             }
         }
     }
 
     public void roboticCatStatusChartHeader() {
         System.out.println("\nThis is the status of all the Robotic Cats: ");
-        System.out.println("\nName      |Health  |Happiness  |Sadness  |Boredom |Oil Level");
-        System.out.println("----------|--------|-----------|---------|--------|--------");
+        System.out.println("\nName      |Health  |Happiness  |Boredom |Oil Level");
+        System.out.println("----------|--------|-----------|--------|--------");
         for (VirtualPet pet: availableVirtualPets().values()){
             if (pet instanceof RoboticCat){
-                System.out.println(pet.getName() + "\t" + "\t" + pet.getOverallHealth() + "\t" + "\t" + pet.getHappiness() + "\t" + "\t" + "\t" + pet.getSadness() + "\t" + "\t" + pet.getBoredom() + "\t" + "\t" + ((RoboticCat) pet).getOilMaintenanceLevel());
+                System.out.println(pet.getName() + "\t" + "\t" + pet.getOverallHealth() + "\t" + "\t" + pet.getHappiness() + "\t" + "\t" + "\t" + pet.getBoredom() + "\t" + "\t" + ((RoboticCat) pet).getOilMaintenanceLevel());
             }
         }
     }

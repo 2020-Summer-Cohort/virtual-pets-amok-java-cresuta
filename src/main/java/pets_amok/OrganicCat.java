@@ -43,22 +43,22 @@ public class OrganicCat extends Cat implements Organic {
 
     @Override
     public void updateVirtualPetFields(){
-        this.hunger += 5;
-        this.thirst += 5;
-        this.levelOfWaste += 5;
+        this.hunger += random.nextInt(7);
+        this.thirst += random.nextInt(7);
+        this.levelOfWaste += random.nextInt(7);
     }
 
     @Override
     public void feedOrganicPet() {
-        hunger -= 10;
-        thirst += random.nextInt(7);
-        levelOfWaste += random.nextInt(7);
+        hunger -= 15;
+        thirst += 5;
+        levelOfWaste += 10;
     }
 
     @Override
     public void waterOrganicPet() {
-        thirst -= 10;
-        hunger += random.nextInt(7);
-        levelOfWaste += random.nextInt(7);
+        thirst -= 15;
+        hunger += 5;
+        levelOfWaste += 10;
     }
 }

@@ -11,7 +11,7 @@ public class RoboticCat extends Cat implements Robotic {
 
     @Override
     public void updateVirtualPetFields() {
-        this.oilMaintenanceLevel += 5;
+        this.oilMaintenanceLevel -= random.nextInt(7);
     }
 
     public int getOilMaintenanceLevel() {
@@ -24,7 +24,7 @@ public class RoboticCat extends Cat implements Robotic {
 
     @Override
     public void oilRoboticPet() {
-        oilMaintenanceLevel += random.nextInt(7);
+        oilMaintenanceLevel += 15;
     }
 
 }
