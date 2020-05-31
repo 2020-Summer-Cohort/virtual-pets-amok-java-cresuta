@@ -116,20 +116,20 @@ public class VirtualPetShelterApp {
                 }
                 wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 10) {
-                System.out.println(wallysShelter.availableVirtualPets().keySet());
-                System.out.println("\nWhich pet would you like to know more about?");
+                System.out.println("\n" + wallysShelter.availableVirtualPets().keySet());
+                System.out.println("Which pet would you like to know more about?");
                 input.nextLine();
                 petChoice = input.nextLine();
                 if (petChoice.equalsIgnoreCase("Mya")) {
-                    System.out.println(petChoice + ": " + mya.getDescription());
+                    System.out.println("** " + petChoice + ": " + mya.getDescription() + ". **");
                 } else if (petChoice.equalsIgnoreCase("Lacy")) {
-                    System.out.println(petChoice + ": " + lacy.getDescription());
+                    System.out.println("** " + petChoice + ": " + lacy.getDescription() + ". **");
                 } else if (petChoice.equalsIgnoreCase("Robo Mya")) {
-                    System.out.println(petChoice + ": " + roboMya.getDescription());
+                    System.out.println("** " + petChoice + ": " + roboMya.getDescription() + ". **");
                 } else if (petChoice.equalsIgnoreCase("Robo Lacy")) {
-                    System.out.println(petChoice + ": " + roboLacy.getDescription());
+                    System.out.println("** " + petChoice + ": " + roboLacy.getDescription() + ". **");
                 } else {
-                    System.out.println(petChoice + ": " + wallysShelter.availableVirtualPets().get(petChoice).getDescription());
+                    System.out.println("** " + petChoice + ": " + wallysShelter.availableVirtualPets().get(petChoice).getDescription() + ". **");
                 }
                 wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 11){
