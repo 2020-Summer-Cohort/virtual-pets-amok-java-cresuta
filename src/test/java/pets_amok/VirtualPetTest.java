@@ -31,7 +31,7 @@ public class VirtualPetTest {
     public void getOilMaintenanceLevelForRoboticDog(){
         RoboticDog underTest = new RoboticDog("Mya","a robotic dog");
         int result = underTest.getOilMaintenanceLevel();
-        assertEquals(30,result);
+        assertEquals(50,result);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class VirtualPetTest {
     public void getOilMaintenanceLevelForRoboticCat(){
         RoboticCat underTest = new RoboticCat("Lacy","a robotic cat");
         int result = underTest.getOilMaintenanceLevel();
-        assertEquals(30,result);
+        assertEquals(50,result);
     }
 
     @Test
