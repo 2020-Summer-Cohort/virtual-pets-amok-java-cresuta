@@ -2,6 +2,19 @@ package pets_amok;
 
 import java.util.Scanner;
 
+// TDD: Testing does not offer enough coverage of more complex methods. It appears you attempted a full TDD approach, but
+// hit some kind of wall once the code you added reached a certain level of complexity. You did good in shifting your approach
+// and getting the rest of the project completed, rather than let the TDD holdup sink you, but we'd like you to go back and add
+// additional tests, as well as clean up what you have. Each test should feature some kind of assert method. In particular,
+// we need to see more coverage of VirtualPetShelter methods
+
+// Clean Code: Your main method below is a little more procedural than we would like to see. Look for places where you may be
+// able to split functionality into multiple methods within this VirtualPetShelterApp. Imagine how long the main method would be if we added even more to this project
+// and how tedious it would become to find places to change the behavior of a specific user option. Split into their own methods,
+// we know exactly where to look to make changes, and the main method becomes a lot more manageable/readable
+
+
+
 public class VirtualPetShelterApp {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
