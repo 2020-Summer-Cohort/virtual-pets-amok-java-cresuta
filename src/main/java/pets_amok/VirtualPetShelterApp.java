@@ -25,71 +25,33 @@ public class VirtualPetShelterApp {
             if (userChoice == 1) {
                 System.out.println("** You feed all the organic pets! **");
                 wallysShelter.feedOrganicPets();
-                wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 2) {
                 System.out.println("** You water all the organic pets! **");
                 wallysShelter.waterOrganicPets();
-                wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 3) {
                 System.out.println("** You clean all the organic dog cages! **");
                 wallysShelter.cleanAllCages();
-                wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 4) {
                 System.out.println("** You clean all the organic cat litter boxes! **");
                 wallysShelter.cleanAllLitterBoxes();
-                wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 5) {
                 System.out.println("** You oiled all the robotic pets! **");
                 wallysShelter.oilAllRoboticPets();
-                wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 6) {
                 System.out.println("Which pet would you like to play with?");
                 System.out.println(wallysShelter.availableVirtualPets().keySet());
                 input.nextLine();
                 petChoice = input.nextLine();
-                if (petChoice.equalsIgnoreCase("Mya")) {
-                    wallysShelter.play("Mya");
-                    System.out.println("** You played with " + mya.getName() + "! **");
-                } else if (petChoice.equalsIgnoreCase("Lacy")) {
-                    wallysShelter.play("Lacy");
-                    System.out.println("** You played with " + lacy.getName() + "! **");
-                } else if (petChoice.equalsIgnoreCase("Robo Mya")) {
-                    wallysShelter.play("Robo Mya");
-                    System.out.println("** You played with " + roboMya.getName() + "! **");
-                } else if (petChoice.equalsIgnoreCase("Robo Lacy")) {
-                    wallysShelter.play("Robo Lacy");
-                    System.out.println("** You played with " + roboLacy.getName() + "! **");
-                } else {
-                    wallysShelter.play(petChoice);
-                    System.out.println("** You played with " + petChoice + "! **");
-                }
-                wallysShelter.updateVirtualPetShelter();
+                wallysShelter.userChoiceEqualsSix(petChoice);
             } else if (userChoice == 7) {
                 System.out.println("** You walked all the dogs! **");
                 wallysShelter.walkAllDogs();
-                wallysShelter.updateVirtualPetShelter();
             } else if (userChoice == 8) {
                 System.out.println("Which pet would you like to adopt?");
                 System.out.println(wallysShelter.availableVirtualPets().keySet());
                 input.nextLine();
                 petChoice = input.nextLine();
-                if (petChoice.equalsIgnoreCase("Mya")) {
-                    System.out.println("** You adopted " + petChoice + "! **");
-                    wallysShelter.adoptVirtualPet("Mya");
-                } else if (petChoice.equalsIgnoreCase("Lacy")) {
-                    System.out.println("** You adopted " + petChoice + "! **");
-                    wallysShelter.adoptVirtualPet("Lacy");
-                } else if (petChoice.equalsIgnoreCase("Robo Mya")) {
-                    System.out.println("** You adopted " + petChoice + "! **");
-                    wallysShelter.adoptVirtualPet("Robo Mya");
-                } else if (petChoice.equalsIgnoreCase("Robo Lacy")) {
-                    System.out.println("** You adopted " + petChoice + "! **");
-                    wallysShelter.adoptVirtualPet("Robo Lacy");
-                } else {
-                    System.out.println("** You adopted " + petChoice + "! **");
-                    wallysShelter.adoptVirtualPet(petChoice);
-                }
-                wallysShelter.updateVirtualPetShelter();
+                wallysShelter.userChoiceEqualsEight(petChoice);
             } else if (userChoice == 9) {
                 System.out.println("Please provide a name and description for the pet you would like to admit.");
                 System.out.println("Name: ");
@@ -101,41 +63,18 @@ public class VirtualPetShelterApp {
                 System.out.println("What type of pet is " + newAdmitName + "?");
                 System.out.println("Press 1 for Organic Dog" + "\nPress 2 for Organic Cat" + "\nPress 3 for Robotic Dog" + "\nPress 4 for Robotic Cat");
                 int choice = input.nextInt();
-                if (choice == 1){
-                    VirtualPet newAdmit = new OrganicDog(newAdmitName,newAdmitDescription);
-                    wallysShelter.admitHomelessVirtualPet(newAdmitName, newAdmit);
-                } else if (choice == 2){
-                    VirtualPet newAdmit = new OrganicCat(newAdmitName,newAdmitDescription);
-                    wallysShelter.admitHomelessVirtualPet(newAdmitName, newAdmit);
-                } else if (choice == 3){
-                    VirtualPet newAdmit = new RoboticDog(newAdmitName,newAdmitDescription);
-                    wallysShelter.admitHomelessVirtualPet(newAdmitName, newAdmit);
-                } else if (choice == 4){
-                    VirtualPet newAdmit = new RoboticCat(newAdmitName,newAdmitDescription);
-                    wallysShelter.admitHomelessVirtualPet(newAdmitName,newAdmit);
-                }
-                wallysShelter.updateVirtualPetShelter();
+                wallysShelter.userChoiceEqualsNine(choice,newAdmitName,newAdmitDescription);
             } else if (userChoice == 10) {
                 System.out.println("\n" + wallysShelter.availableVirtualPets().keySet());
                 System.out.println("Which pet would you like to know more about?");
                 input.nextLine();
                 petChoice = input.nextLine();
-                if (petChoice.equalsIgnoreCase("Mya")) {
-                    System.out.println("** " + petChoice + ": " + mya.getDescription() + ". **");
-                } else if (petChoice.equalsIgnoreCase("Lacy")) {
-                    System.out.println("** " + petChoice + ": " + lacy.getDescription() + ". **");
-                } else if (petChoice.equalsIgnoreCase("Robo Mya")) {
-                    System.out.println("** " + petChoice + ": " + roboMya.getDescription() + ". **");
-                } else if (petChoice.equalsIgnoreCase("Robo Lacy")) {
-                    System.out.println("** " + petChoice + ": " + roboLacy.getDescription() + ". **");
-                } else {
-                    System.out.println("** " + petChoice + ": " + wallysShelter.availableVirtualPets().get(petChoice).getDescription() + ". **");
-                }
-                wallysShelter.updateVirtualPetShelter();
+                wallysShelter.userChoiceEqualsTen(petChoice);
             } else if (userChoice == 11){
                 goodbyeMessage();
                 break;
             }
+            wallysShelter.updateVirtualPetShelter();
         }
     }
 
@@ -159,4 +98,5 @@ public class VirtualPetShelterApp {
         System.out.println("Thanks for volunteering today.");
         System.out.println("Goodbye!");
     }
+
 }

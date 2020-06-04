@@ -2,6 +2,7 @@ package pets_amok;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class VirtualPetShelter {
     protected Map<String, VirtualPet> virtualShelter = new HashMap<>();
@@ -131,5 +132,75 @@ public class VirtualPetShelter {
         organicCatStatusChartHeader();
         roboticDogStatusChartHeader();
         roboticCatStatusChartHeader();
+    }
+
+    // Methods to simplify conditional statement body's for when userChoice = 6, 8, 9, 10
+    public void userChoiceEqualsSix(String petChoice){
+        if (petChoice.equalsIgnoreCase("Mya")) {
+            play("Mya");
+            System.out.println("** You played with " + showVirtualPet("Mya").getName() + "! **");
+        } else if (petChoice.equalsIgnoreCase("Lacy")) {
+            play("Lacy");
+            System.out.println("** You played with " + showVirtualPet("Lacy").getName() + "! **");
+        } else if (petChoice.equalsIgnoreCase("Robo Mya")) {
+            play("Robo Mya");
+            System.out.println("** You played with " + showVirtualPet("Robo Mya").getName() + "! **");
+        } else if (petChoice.equalsIgnoreCase("Robo Lacy")) {
+            play("Robo Lacy");
+            System.out.println("** You played with " + showVirtualPet("Robo Lacy").getName() + "! **");
+        } else {
+            play(petChoice);
+            System.out.println("** You played with " + showVirtualPet(petChoice).getName() + "! **");
+        }
+    }
+
+    public void userChoiceEqualsEight(String petChoice){
+        if (petChoice.equalsIgnoreCase("Mya")) {
+            System.out.println("** You adopted " + petChoice + "! **");
+            adoptVirtualPet("Mya");
+        } else if (petChoice.equalsIgnoreCase("Lacy")) {
+            System.out.println("** You adopted " + petChoice + "! **");
+            adoptVirtualPet("Lacy");
+        } else if (petChoice.equalsIgnoreCase("Robo Mya")) {
+            System.out.println("** You adopted " + petChoice + "! **");
+            adoptVirtualPet("Robo Mya");
+        } else if (petChoice.equalsIgnoreCase("Robo Lacy")) {
+            System.out.println("** You adopted " + petChoice + "! **");
+            adoptVirtualPet("Robo Lacy");
+        } else {
+            System.out.println("** You adopted " + petChoice + "! **");
+            adoptVirtualPet(petChoice);
+        }
+    }
+
+    public void userChoiceEqualsNine(int choice, String newAdmitName, String newAdmitDescription){
+        Scanner input = new Scanner(System.in);
+        if (choice == 1){
+            VirtualPet newAdmit = new OrganicDog(newAdmitName,newAdmitDescription);
+            admitHomelessVirtualPet(newAdmitName, newAdmit);
+        } else if (choice == 2){
+            VirtualPet newAdmit = new OrganicCat(newAdmitName,newAdmitDescription);
+            admitHomelessVirtualPet(newAdmitName, newAdmit);
+        } else if (choice == 3){
+            VirtualPet newAdmit = new RoboticDog(newAdmitName,newAdmitDescription);
+            admitHomelessVirtualPet(newAdmitName, newAdmit);
+        } else if (choice == 4){
+            VirtualPet newAdmit = new RoboticCat(newAdmitName,newAdmitDescription);
+            admitHomelessVirtualPet(newAdmitName,newAdmit);
+        }
+    }
+
+    public void userChoiceEqualsTen(String petChoice){
+        if (petChoice.equalsIgnoreCase("Mya")) {
+            System.out.println("** " + petChoice + ": " + showVirtualPet("Mya").getDescription() + ". **");
+        } else if (petChoice.equalsIgnoreCase("Lacy")) {
+            System.out.println("** " + petChoice + ": " + showVirtualPet("Lacy").getDescription() + ". **");
+        } else if (petChoice.equalsIgnoreCase("Robo Mya")) {
+            System.out.println("** " + petChoice + ": " + showVirtualPet("Robo Mya").getDescription() + ". **");
+        } else if (petChoice.equalsIgnoreCase("Robo Lacy")) {
+            System.out.println("** " + petChoice + ": " + showVirtualPet("Robo Lacy").getDescription() + ". **");
+        } else {
+            System.out.println("** " + petChoice + ": " + availableVirtualPets().get(petChoice).getDescription() + ". **");
+        }
     }
 }
