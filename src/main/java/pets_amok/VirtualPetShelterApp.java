@@ -6,14 +6,10 @@ public class VirtualPetShelterApp {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         VirtualPetShelter wallysShelter = new VirtualPetShelter();
-        VirtualPet mya = new OrganicDog("Mya", "an organic golden retriever dog");
-        VirtualPet lacy = new OrganicCat("Lacy", "an organic himilayan cat");
-        VirtualPet roboMya = new RoboticDog("Robo Mya", "a robotic golden retriever dog");
-        VirtualPet roboLacy = new RoboticCat("Robo Lacy", "a robotic himilayan cat");
-        wallysShelter.admitHomelessVirtualPet("Mya", mya);
-        wallysShelter.admitHomelessVirtualPet("Lacy", lacy);
-        wallysShelter.admitHomelessVirtualPet("Robo Mya", roboMya);
-        wallysShelter.admitHomelessVirtualPet("Robo Lacy", roboLacy);
+        wallysShelter.admitHomelessVirtualPet("Mya", new OrganicDog("Mya","an organic golden retriever dog"));
+        wallysShelter.admitHomelessVirtualPet("Lacy", new OrganicCat("Lacy", "an organic himilayan cat"));
+        wallysShelter.admitHomelessVirtualPet("Robo Mya", new RoboticDog("Robo Mya", "a robotic golden retriever dog"));
+        wallysShelter.admitHomelessVirtualPet("Robo Lacy", new RoboticCat("Robo Lacy", "a robotic himilayan cat"));
         System.out.println("\nThank you for volunteering at Wally's Virtual Pet Shelter!");
         String petChoice;
         int userChoice;

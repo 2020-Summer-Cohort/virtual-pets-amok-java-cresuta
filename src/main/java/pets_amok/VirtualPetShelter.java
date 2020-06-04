@@ -134,7 +134,7 @@ public class VirtualPetShelter {
         roboticCatStatusChartHeader();
     }
 
-    // Methods to simplify conditional statement body's for when userChoice = 6, 8, 9, 10
+    // Methods to simplify conditional statement body's for when userChoice = 6, 8, 9, or 10
     public void userChoiceEqualsSix(String petChoice){
         if (petChoice.equalsIgnoreCase("Mya")) {
             play("Mya");
